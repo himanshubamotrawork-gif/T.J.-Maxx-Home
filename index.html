@@ -19,12 +19,12 @@
 <style>
 :root {
   --bg: #ffffff;
-  --section-bg: #c7dfea;          /* light blue section like ref */
-  --text: #111111;
-  --muted: #444444;
-  --border: #e5e5e5;
-  --primary: #e10600;             /* TJ Maxx red */
-  --accent: #5a3dad;              /* runway purple */
+  --section-bg: #e9f2f9;     /* light retail blue */
+  --card-bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #dbe5ee;
+  --primary: #1e5fd8;        /* clean retail blue */
 }
 
 /* RESET */
@@ -65,10 +65,10 @@ body {
 }
 
 .card-mask {
-  background: #ffffff;
+  background: var(--card-bg);
   padding: 14px;
   border-radius: 12px;
-  border: 2px solid var(--primary);
+  border: 1px solid var(--border);
 }
 
 .card-wrap img {
@@ -98,7 +98,7 @@ h1 span {
   font-weight: 500;
 }
 
-/* CTA – BOLD RETAIL */
+/* CTA — BLUE RETAIL */
 .cta {
   background: var(--primary);
   color: #ffffff;
@@ -107,11 +107,11 @@ h1 span {
   height: 56px;
   padding: 0 32px;
   font-size: 16px;
-  font-weight: 900;
-  border-radius: 8px;
+  font-weight: 800;
+  border-radius: 10px;
   cursor: pointer;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -119,7 +119,7 @@ h1 span {
 }
 
 .cta:hover {
-  background: #b90500;
+  background: #174bb3;
   transform: translateY(-1px);
 }
 
@@ -163,7 +163,7 @@ h1 span {
 .num {
   min-width: 36px;
   height: 36px;
-  border-radius: 6px;
+  border-radius: 8px;
   background: var(--primary);
   color: #ffffff;
   font-weight: 900;
@@ -180,7 +180,7 @@ h1 span {
 /* FOOTER */
 .footer {
   font-size: 12px;
-  color: #777777;
+  color: #64748b;
   margin-top: 44px;
 }
 

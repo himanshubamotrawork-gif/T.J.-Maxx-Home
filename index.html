@@ -16,19 +16,18 @@
     debug_mode: false
       });
 </script>
-  <style>
+<style>
 :root {
-  /* SKIMS Valentine palette */
-  --primary: #e8a3b5;        /* blush pink */
-  --primary-dark: #d58da0;
-  --accent: #f6dce3;         /* soft heart pink */
   --bg: #ffffff;
-  --card-bg: #ffffff;
+  --section-bg: #c7dfea;          /* light blue section like ref */
   --text: #111111;
-  --muted: #777777;
-  --border: #f0f0f0;
+  --muted: #444444;
+  --border: #e5e5e5;
+  --primary: #e10600;             /* TJ Maxx red */
+  --accent: #5a3dad;              /* runway purple */
 }
 
+/* RESET */
 * {
   box-sizing: border-box;
 }
@@ -41,159 +40,156 @@ body {
   overflow-x: hidden;
 }
 
-/* subtle valentine background decor */
-body::before {
-  content: "❤ ❤ ❤";
-  position: fixed;
-  top: 10%;
-  left: 5%;
-  font-size: 120px;
-  color: var(--accent);
-  opacity: 0.25;
-  z-index: -1;
-}
-
-body::after {
-  content: "❤";
-  position: fixed;
-  bottom: 8%;
-  right: 8%;
-  font-size: 160px;
-  color: var(--accent);
-  opacity: 0.2;
-  z-index: -1;
-}
-
+/* LAYOUT */
 .container {
   max-width: 720px;
   margin: auto;
-  padding: 36px 20px 60px;
+  padding: 36px 20px 64px;
   text-align: center;
 }
 
-/* Brand */
+/* BRAND */
 .brand {
-  font-weight: 600;
-  font-size: 22px;
+  font-weight: 900;
+  font-size: 26px;
   margin-bottom: 26px;
   color: var(--primary);
-  letter-spacing: 1px;
+  letter-spacing: 0.4px;
 }
 
-/* Image card */
+/* CARD IMAGE */
 .card-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .card-mask {
-  background: var(--card-bg);
+  background: #ffffff;
   padding: 14px;
-  border-radius: 22px;
-  border: 1px solid var(--border);
+  border-radius: 12px;
+  border: 2px solid var(--primary);
 }
 
 .card-wrap img {
   width: 260px;
   max-width: 100%;
   display: block;
-  border-radius: 18px;
+  border-radius: 8px;
 }
 
-/* Headings */
+/* HEADLINE */
 h1 {
-  font-size: 34px;
-  font-weight: 600;
+  font-size: 36px;
   margin: 0 0 14px;
-  letter-spacing: -0.3px;
+  font-weight: 900;
+  line-height: 1.1;
 }
 
 h1 span {
   color: var(--primary);
 }
 
-/* Subtext */
+/* SUBTEXT */
 .sub {
-  color: var(--muted);
   font-size: 16px;
-  margin-bottom: 32px;
-  line-height: 1.5;
+  color: var(--muted);
+  margin-bottom: 30px;
+  font-weight: 500;
 }
 
-/* Primary CTA */
+/* CTA – BOLD RETAIL */
 .cta {
-  background: linear-gradient(180deg, #f1b6c6, #e8a3b5);
-  color: #fff;
+  background: var(--primary);
+  color: #ffffff;
   border: none;
-  padding: 18px 44px;
-  font-size: 17px;
-  font-weight: 600;
-  border-radius: 999px;
+  min-width: 280px;
+  height: 56px;
+  padding: 0 32px;
+  font-size: 16px;
+  font-weight: 900;
+  border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 10px 26px rgba(232,163,181,.35);
-  transition: transform .15s ease, box-shadow .15s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(232,163,181,.45);
+  background: #b90500;
+  transform: translateY(-1px);
 }
 
-/* How it works */
+/* HOW IT WORKS SECTION */
 .how {
   margin-top: 56px;
+  background: var(--section-bg);
+  padding: 40px 20px;
+  border-radius: 18px;
 }
 
 .how h2 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 26px;
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 28px;
 }
 
-/* Steps */
+/* STEPS */
 .step {
-  background: #fff;
-  border-radius: 20px;
-  padding: 18px 22px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 20px;
   display: flex;
   gap: 16px;
   align-items: center;
   margin-bottom: 16px;
   border: 1px solid var(--border);
-  box-shadow: 0 6px 16px rgba(0,0,0,.04);
   text-align: left;
 }
 
+.step strong {
+  font-weight: 800;
+}
+
+.step span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* STEP NUMBER */
 .num {
   min-width: 36px;
   height: 36px;
-  border-radius: 50%;
+  border-radius: 6px;
   background: var(--primary);
-  color: #fff;
-  font-weight: 600;
+  color: #ffffff;
+  font-weight: 900;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Final CTA spacing */
+/* FINAL CTA */
 .final-cta {
-  margin-top: 36px;
+  margin-top: 32px;
 }
 
-/* Footer */
+/* FOOTER */
 .footer {
   font-size: 12px;
-  color: #999;
+  color: #777777;
   margin-top: 44px;
 }
 
-/* Desktop block */
+/* DESKTOP BLOCK */
 #desktop-message {
   display: none;
   text-align: center;
   padding: 80px 20px;
+  color: var(--text);
 }
 </style>
 </head>
